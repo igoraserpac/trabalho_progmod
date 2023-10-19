@@ -12,7 +12,7 @@ public class Celula {
 
     public double Concentracao(){
         // TODO
-        return 0;
+        return 1;
     }
 
     public double Rugosidade() {
