@@ -17,7 +17,7 @@ public class Celula {
 
     public double Rugosidade() {
         // TODO
-        return 0;
+        return 1;
     }
 
     public double PodeSondar(){
