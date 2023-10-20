@@ -1,6 +1,7 @@
 package Equipe;
 
 public class Equipe {
+    String nome;
     public double baris;
     public Robo[] robos;
 
