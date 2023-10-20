@@ -1,7 +1,7 @@
 package Terreno;
 
 public class Terreno {
-    public int[][] terreno;
+    public Celula[][] terreno;
 
     public void CriarTerreno(){
         // TODO
