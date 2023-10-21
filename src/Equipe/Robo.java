@@ -2,40 +2,49 @@ package Equipe;
 
 import Terreno.Celula;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Robo {
     public double barris;
     char direcao;
     Celula atual;
-    public double barris(){
+    public double Barris(){
+        return this.barris;
+    }
+    public Map<Character, Integer> posicao(){
+        return this.atual.pos;
+    }
+    public double Concentracao(){
+        return this.atual.Concentracao();
+    }
+    public double Rugosidade(){
+        return this.atual.Rugosidade();
+    }
+    public double Tempo(){
         // TODO
         return 0;
     }
-    public double posicao(){
+    public void GirarDireita(){
         // TODO
-        return 0;
+        // Criar um map com as seguintes chaves e valores na classe:
+        // Map direita = {
+        //                  'N': 'L';
+        //                  'L': 'S';
+        //                  'S': 'O';
+        //                  'O': 'N';
+        //                }
+        // depois de criado, a função fará o seguinte:
+        // this.direcao = direita[this.direcao]
     }
-    public double concentracao(){
+    public void GirarEsquerda(){
         // TODO
-        return 0;
+        // Similar a GirarDireita
     }
-    public double rugosidade(){
-        // TODO
-        return 0;
-    }
-    public double tempo(){
-        // TODO
-        return 0;
-    }
-    public void girar_direita(){
-        // TODO
-    }
-    public void girar_esquerda(){
+    public void Andar(){
         // TODO
     }
-    public void andar(){
-        // TODO
-    }
-    public void sondar(){
+    public void Sondar(){
         // TODO
     }
 }
