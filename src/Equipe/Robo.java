@@ -2,40 +2,39 @@ package Equipe;
 
 import Terreno.Celula;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Robo {
     public double barris;
     char direcao;
     Celula atual;
-    public double barris(){
+    public double Barris(){
+        return this.barris;
+    }
+    public Map<Character, Integer> posicao(){
+        return this.atual.pos;
+    }
+    public double Concentracao(){
+        return this.atual.Concentracao();
+    }
+    public double Rugosidade(){
+        return this.atual.Rugosidade();
+    }
+    public double Tempo(){
         // TODO
         return 0;
     }
-    public double posicao(){
-        // TODO
-        return 0;
-    }
-    public double concentracao(){
-        // TODO
-        return 0;
-    }
-    public double rugosidade(){
-        // TODO
-        return 0;
-    }
-    public double tempo(){
-        // TODO
-        return 0;
-    }
-    public void girar_direita(){
+    public void GirarDireita(){
         // TODO
     }
-    public void girar_esquerda(){
+    public void GirarEsquerda(){
         // TODO
     }
-    public void andar(){
+    public void Andar(){
         // TODO
     }
-    public void sondar(){
+    public void Sondar(){
         // TODO
     }
 }
