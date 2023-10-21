@@ -27,9 +27,19 @@ public class Robo {
     }
     public void GirarDireita(){
         // TODO
+        // Criar um map com as seguintes chaves e valores na classe:
+        // Map direita = {
+        //                  'N': 'L';
+        //                  'L': 'S';
+        //                  'S': 'O';
+        //                  'O': 'N';
+        //                }
+        // depois de criado, a função fará o seguinte:
+        // this.direcao = direita[this.direcao]
     }
     public void GirarEsquerda(){
         // TODO
+        // Similar a GirarDireita
     }
     public void Andar(){
         // TODO
