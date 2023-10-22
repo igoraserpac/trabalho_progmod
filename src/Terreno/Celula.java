@@ -41,11 +41,15 @@ public class Celula {
     }
 
     public boolean PodeSondar(){
-        if(this.ocupada == false){
-            return true;
+        if(this.t.terreno[this.pos.get('x')+1][this.pos.get('y')].sendo_sondada == false){
+            if(this.t.terreno[this.pos.get('x')-1][this.pos.get('y')].sendo_sondada == false){
+                if(this.t.terreno[this.pos.get('x')][this.pos.get('y')+1].sendo_sondada == false){
+                    if(this.t.terreno[this.pos.get('x')][this.pos.get('y')-1].sendo_sondada == false){
+                        return true;
+                    }
+                }
+            }
         }
-        else{
-            return false;
-        }
+        return false;
     }
 }

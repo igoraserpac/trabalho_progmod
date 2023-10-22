@@ -92,6 +92,9 @@ public class Robo {
         }
     }
     public void Sondar(){
-        // TODO
+        if(this.atual.PodeSondar() == true){
+            //TODO
+        }
+
     }
 }
