@@ -28,34 +28,10 @@ public class Robo {
         return 0;
     }
     public void GirarDireita(){
-        // TODO
-        // Criar um map com as seguintes chaves e valores na classe:
-        // Map direita = {
-        //                  'N': 'L';
-        //                  'L': 'S';
-        //                  'S': 'O';
-        //                  'O': 'N';
-        //                }
-        // depois de criado, a função fará o seguinte:
-        // this.direcao = direita[this.direcao]
-
-        Map<Character, Character> direita = new HashMap<>();
-        direita.put('N', 'L');
-        direita.put('L', 'S');
-        direita.put('S', 'O');
-        direita.put('O', 'N');
-
-        this.direcao = direita.get(this.direcao);
+        this.direcao = this.atual.t.direita.get(this.direcao);
     }
     public void GirarEsquerda(){
-        // TODO
-        Map<Character, Character> esquerda = new HashMap<>();
-        esquerda.put('N', 'O');
-        esquerda.put('L', 'N');
-        esquerda.put('S', 'L');
-        esquerda.put('O', 'S');
-
-        this.direcao = esquerda.get(this.direcao);
+        this.direcao = this.atual.t.esquerda.get(this.direcao);
     }
     public void Andar(Terreno t){
         if(this.direcao == 'N'){
