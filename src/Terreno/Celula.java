@@ -13,7 +13,7 @@ public class Celula {
     public boolean sendo_sondada = false;
     public Terreno t;
 
-    public void Init(int x, int y){
+    public void Init(int x, int y, Terreno t){
         Random rand = new Random();
         this.concentracao = rand.nextDouble();
         this.lim_inf_coef_erro = rand.nextDouble() / 20;       // Limite inferior do coeficiente de erro
@@ -24,6 +24,7 @@ public class Celula {
         this.pos.put('y', y);
         this.ocupada = false;
         this.sendo_sondada = false;
+        this.t = t;
     }
     public double Concentracao(){
         Random rand = new Random();
