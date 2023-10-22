@@ -1,5 +1,6 @@
 package Main;
 
+import Equipe.Equipe;
 import Terreno.Terreno;
 
 public class Main {

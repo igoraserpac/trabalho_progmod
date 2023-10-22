@@ -13,7 +13,7 @@ public class Terreno {
         for (int i = 0; i < this.x; i++){
             for (int j = 0; j < this.y; j++){
                 terreno[i][j] = new Celula();
-                terreno[i][j].Init(i, y-j-1);
+                terreno[i][j].Init(i,this.y-j-1);
             }
         }
     }

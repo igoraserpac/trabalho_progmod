@@ -10,6 +10,7 @@ public class Robo {
     public double barris;
     char direcao;
     Celula atual;
+
     public double Barris(){
         return this.barris;
     }
@@ -57,7 +58,6 @@ public class Robo {
         this.direcao = esquerda.get(this.direcao);
     }
     public void Andar(Terreno t){
-        // TODO
         if(this.direcao == 'N'){
             if(this.atual.pos.get('y') >= t.y){
                 return;

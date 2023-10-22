@@ -40,7 +40,6 @@ public class Celula {
     }
 
     public boolean PodeSondar(){
-        // TODO
         return true;
     }
 
