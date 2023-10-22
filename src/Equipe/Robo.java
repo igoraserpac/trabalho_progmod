@@ -68,6 +68,6 @@ public class Robo {
         }
     }
     public void Sondar(){
-        // TODO
+        this.atual.sendo_sondada = this.atual.PodeSondar();
     }
 }
