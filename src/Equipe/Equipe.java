@@ -29,7 +29,6 @@ public class Equipe {
         for(int i = 0; i < this.total_robos; i++){
             total += this.robos[i].barris;
         }
-
         return total;
     }
 
