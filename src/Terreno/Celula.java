@@ -40,8 +40,11 @@ public class Celula {
     }
 
     public boolean PodeSondar(){
-        // TODO
-        return true;
+        if(this.ocupada == false){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
-
 }
