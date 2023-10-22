@@ -62,25 +62,33 @@ public class Robo {
             if(this.atual.pos.get('y') >= t.y){
                 return;
             }
+            this.atual.ocupada = false;
             this.atual = t.terreno[this.atual.pos.get('x')][this.atual.pos.get('x') + 1];
+            this.atual.ocupada = true;
         }
         else if(this.direcao == 'S'){
             if(this.atual.pos.get('y') <= 0){
                 return;
             }
+            this.atual.ocupada = false;
             this.atual = t.terreno[this.atual.pos.get('x')][this.atual.pos.get('x') - 1];
+            this.atual.ocupada = true;
         }
         else if(this.direcao == 'L'){
             if(this.atual.pos.get('x') >= t.x){
                 return;
             }
+            this.atual.ocupada = false;
             this.atual = t.terreno[this.atual.pos.get('x') + 1][this.atual.pos.get('x')];
+            this.atual.ocupada = true;
         }
         else if(this.direcao == 'O'){
             if(this.atual.pos.get('x') <= 0){
                 return;
             }
+            this.atual.ocupada = false;
             this.atual = t.terreno[this.atual.pos.get('x') - 1][this.atual.pos.get('x')];
+            this.atual.ocupada = true;
         }
     }
     public void Sondar(){
