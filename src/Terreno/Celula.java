@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Celula {
     public Map<Character, Integer> pos;
-    private double concentracao;
+    public double concentracao;
     private double lim_inf_coef_erro;
     private double lim_sup_coef_erro;
     private double rugosidade;
