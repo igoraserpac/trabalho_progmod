@@ -31,5 +31,4 @@ public class Equipe {
         }
         return total;
     }
-
 }
