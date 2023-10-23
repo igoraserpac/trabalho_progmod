@@ -8,10 +8,13 @@ public class Equipe {
     public double baris;
     public Robo[] robos;
 
+    public Equipe(int total){
+        this.total_robos = total;
+        this.robos = new Robo[this.total_robos];
+    }
     public double ver_barris_robo(int i){
         return this.robos[i].barris;
     }
-
     public Map<String, Integer> ver_posi_robo(int i){
         return this.robos[i].posicao();
     }
