@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Celula {
-    public Map<Character, Integer> pos;
+    public Map<String, Integer> pos;
     public double concentracao;
     private double lim_inf_coef_erro;
     private double lim_sup_coef_erro;
@@ -20,8 +20,8 @@ public class Celula {
         this.lim_sup_coef_erro = this.lim_inf_coef_erro * 2;  // Limite superior do coeficiente de erro
         this.rugosidade = rand.nextDouble();
         this.pos = new HashMap<>();
-        this.pos.put('x', x);
-        this.pos.put('y', y);
+        this.pos.put("linha", x);
+        this.pos.put("coluna", y);
         this.ocupada = false;
         this.sendo_sondada = false;
         this.t = t;
@@ -41,15 +41,23 @@ public class Celula {
     }
 
     public boolean PodeSondar(){
-        if(this.t.terreno[this.pos.get('x')+1][this.pos.get('y')].sendo_sondada == false){
-            if(this.t.terreno[this.pos.get('x')-1][this.pos.get('y')].sendo_sondada == false){
-                if(this.t.terreno[this.pos.get('x')][this.pos.get('y')+1].sendo_sondada == false){
-                    if(this.t.terreno[this.pos.get('x')][this.pos.get('y')-1].sendo_sondada == false){
-                        return true;
-                    }
+//        if(this.t.terreno[this.pos.get("linha)+1][this.pos.get("coluna)].sendo_sondada == false){
+//            if(this.t.terreno[this.pos.get("linha)-1][this.pos.get("coluna)].sendo_sondada == false){
+//                if(this.t.terreno[this.pos.get("linha)][this.pos.get("coluna)+1].sendo_sondada == false){
+//                    if(this.t.terreno[this.pos.get("linha)][this.pos.get("coluna)-1].sendo_sondada == false){
+//                        return true;
+//                    }
+//                }
+//            }
+//        }
+//        return false;
+        for(int i = this.pos.get("linha") - 1; i < this.pos.get("linha") + 2; i++){
+            for(int j = this.pos.get("coluna") - 1; j < this.pos.get("coluna") + 2; i++){
+                if(i >= 0 && i < this.t.x && j >=0 && j < this.t.y){
+                    if(this.t.terreno[i][j].sendo_sondada) return false;
                 }
             }
         }
-        return false;
+        return true;
     }
 }

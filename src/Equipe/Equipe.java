@@ -12,7 +12,7 @@ public class Equipe {
         return this.robos[i].barris;
     }
 
-    public Map<Character, Integer> ver_posi_robo(int i){
+    public Map<String, Integer> ver_posi_robo(int i){
         return this.robos[i].posicao();
     }
     public double ver_conc_robo(int i){

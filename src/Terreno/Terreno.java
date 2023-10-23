@@ -10,9 +10,9 @@ public class Terreno {
     public Celula[][] terreno;
     public int x;
     public int y;
-    public Terreno(int x1, int y1){
-        this.x = x1;
-        this.y = y1;
+    public Terreno(int x, int y){
+        this.x = x;
+        this.y = y;
         direita = new HashMap<>();
         direita.put('N', 'L');
         direita.put('L', 'S');

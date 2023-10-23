@@ -1,4 +1,8 @@
 package Equipe;
 public class Controlador {
-    // TODO
+    public int tempo;
+    Equipe equipe;
+    public void play(){
+        // TODO
+    }
 }
