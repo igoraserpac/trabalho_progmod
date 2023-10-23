@@ -1,4 +1,6 @@
 package Equipe;
 public class Controlador {
-    // TODO
+    void play(){
+        //TODO
+    }
 }
