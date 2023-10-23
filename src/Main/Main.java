@@ -6,6 +6,7 @@ import Equipe.Robo;
 
 import java.util.Random;
 
+import Equipe.Controlador;
 public class Main {
     public static void imprimir(Robo gpt){
         for(int i = 4; i >= 0; i--){
@@ -76,5 +77,9 @@ public class Main {
         imprimir(gpt);
         gpt.Sondar();
         imprimir(gpt);
+
+        //Controlador c = new Controlador(5, T);
+        //c.play();
     }
+
 }
