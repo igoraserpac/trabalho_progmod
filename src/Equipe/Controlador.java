@@ -1,14 +1,16 @@
 package Equipe;
 
 import Terreno.Terreno;
-
+import Equipe.Robo;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Controlador {
     public static int tempo_jogo = 60;
     public int tempo;
+    public double randomico;
     Equipe equipe;
+    Robo robo;
     public Controlador(int n_robos, Terreno terreno){
         Random rand = new Random();
         this.equipe = new Equipe(n_robos);
@@ -30,8 +32,23 @@ public class Controlador {
     }
     public void play(){
         // TODO
-        tempo = ThreadLocalRandom.current().nextInt(0, 20);
-        System.out.println("Número aleatório: " + tempo);
+        Robo rob = new Robo();
+
+        while(tempo != tempo_jogo){
+
+            randomico = Math.random()*100;
+            //System.out.println("Número aleatório: " + tempo);
+            if(randomico%2==0){
+                rob.GirarDireita();
+            }
+            else if(randomico%2!=0){
+                rob.GirarEsquerda();
+            }
+            else if(randomico>10){
+
+            }
+        }
+
 
     }
 }
