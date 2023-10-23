@@ -3,9 +3,10 @@ package Equipe;
 import Terreno.Terreno;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Controlador {
-
+    public static int tempo_jogo = 60;
     public int tempo;
     Equipe equipe;
     public Controlador(int n_robos, Terreno terreno){
@@ -29,5 +30,8 @@ public class Controlador {
     }
     public void play(){
         // TODO
+        tempo = ThreadLocalRandom.current().nextInt(0, 20);
+        System.out.println("Número aleatório: " + tempo);
+
     }
 }
