@@ -4,6 +4,8 @@ import Equipe.Equipe;
 import Terreno.Terreno;
 import Equipe.Robo;
 
+import java.util.Random;
+
 public class Main {
     public static void imprimir(Robo gpt){
         for(int i = 4; i >= 0; i--){
@@ -74,7 +76,5 @@ public class Main {
         imprimir(gpt);
         gpt.Sondar();
         imprimir(gpt);
-
-
     }
 }
