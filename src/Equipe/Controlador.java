@@ -10,7 +10,7 @@ public class Controlador {
     Equipe equipe;
     public Controlador(int n_robos, Terreno terreno){
         Random rand = new Random();
-        this.equipe = new Equipe();
+        this.equipe = new Equipe(n_robos);
         for(int i = 0; i < n_robos; i++){
             Robo temp = new Robo();
             temp.direcao = 'L';
