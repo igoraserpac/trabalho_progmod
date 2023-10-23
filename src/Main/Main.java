@@ -6,8 +6,8 @@ import Equipe.Robo;
 
 public class Main {
     public static void imprimir(Robo gpt){
-        for(int i = 2; i >= 0; i--){
-            for(int j = 0; j < 3; j++){
+        for(int i = 4; i >= 0; i--){
+            for(int j = 0; j < 5; j++){
                 if(gpt.posicao().get("linha") == i && gpt.posicao().get("coluna") == j){
                     if(gpt.direcao == 'N') System.out.print("^");
                     else if(gpt.direcao == 'S') System.out.print("v");
@@ -21,10 +21,10 @@ public class Main {
         System.out.print('\n');
     }
     public static void main(String[] args){
-        Terreno T = new Terreno(3, 3);
+        Terreno T = new Terreno(5, 5);
         T.CriarTerreno();
-        for (int linha = 2; linha >= 0; linha--){
-            for (int coluna = 0; coluna < 3; coluna++){
+        for (int linha = 4; linha >= 0; linha--){
+            for (int coluna = 0; coluna < 5; coluna++){
                 System.out.println(T.terreno[linha][coluna].pos.get("linha") + " "+ T.terreno[linha][coluna].pos.get("coluna"));
                 System.out.println(T.terreno[linha][coluna].Concentracao() + " " + T.terreno[linha][coluna].Rugosidade());
             }

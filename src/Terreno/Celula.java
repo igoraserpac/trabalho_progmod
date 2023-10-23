@@ -1,4 +1,6 @@
 package Terreno;
+import Equipe.Robo;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -12,6 +14,7 @@ public class Celula {
     public boolean ocupada = false;
     public boolean sendo_sondada = false;
     public Terreno t;
+    public Robo r;
 
     public void Init(int x, int y, Terreno t){
         Random rand = new Random();
@@ -51,8 +54,8 @@ public class Celula {
 //            }
 //        }
 //        return false;
-        for(int i = this.pos.get("linha") - 1; i < this.pos.get("linha") + 2; i++){
-            for(int j = this.pos.get("coluna") - 1; j < this.pos.get("coluna") + 2; i++){
+        for(int i = this.pos.get("linha") + 1; i > this.pos.get("linha") - 2; i--){
+            for(int j = this.pos.get("coluna") - 1; j < this.pos.get("coluna") + 2; j++){
                 if(i >= 0 && i < this.t.x && j >=0 && j < this.t.y){
                     if(this.t.terreno[i][j].sendo_sondada) return false;
                 }
