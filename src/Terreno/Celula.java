@@ -16,7 +16,7 @@ public class Celula {
     public Terreno t;
     public Robo r;
 
-    public void Init(int x, int y, Terreno t){
+    public void Init(int x, int y, Terreno t) {
         Random rand = new Random();
         this.concentracao = rand.nextDouble();
         this.lim_inf_coef_erro = rand.nextDouble() / 20;       // Limite inferior do coeficiente de erro
@@ -29,17 +29,18 @@ public class Celula {
         this.sendo_sondada = false;
         this.t = t;
     }
-    public double Concentracao(){
+
+    public double Concentracao() {
         Random rand = new Random();
         double tam_intervalo = this.lim_sup_coef_erro - this.lim_inf_coef_erro;
         double erro = rand.nextDouble() * tam_intervalo;
-        if(rand.nextDouble() < 0.5){
+        if (rand.nextDouble() < 0.5) {
             return this.concentracao - this.lim_inf_coef_erro + erro;
         }
         return this.concentracao + this.lim_inf_coef_erro + erro;
     }
 
-    public double Rugosidade(){
+    public double Rugosidade() {
         return this.rugosidade;
     }
 
@@ -63,4 +64,5 @@ public class Celula {
         }
         return true;
     }
+
 }
