@@ -1,15 +1,33 @@
 package Equipe;
 
+import Main.Main;
 import Terreno.Terreno;
 import Equipe.Robo;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Controlador {
-    public static int tempo_jogo = 60;
+    public int tempo_jogo = 60;
     public int tempo;
     public double randomico;
-    Equipe equipe;
+//    public Controlador(int n_robos, Terreno terreno, String nome){
+    public Equipe equipe;
+
+    public void imprimir_terreno(Terreno T){
+        for(int i = T.x-1; i >= 0; i--){
+            for(int j = 0; j < T.y; j++){
+                if(T.terreno[i][j].ocupada){
+                    if(T.terreno[i][j].robo.direcao == 'N') System.out.print("^");
+                    else if(T.terreno[i][j].robo.direcao == 'S') System.out.print("v");
+                    else if(T.terreno[i][j].robo.direcao == 'L') System.out.print(">");
+                    else if(T.terreno[i][j].robo.direcao == 'O') System.out.print("<");
+                }else System.out.print('*');
+            }
+            System.out.print('\n');
+        }
+        System.out.print('\n');
+        System.out.print('\n');
+    }
     public Controlador(int n_robos, Terreno terreno, String nome){
         Random rand = new Random();
         this.equipe = new Equipe(nome, n_robos);
@@ -27,6 +45,8 @@ public class Controlador {
             temp.tempo = 0;
             temp.barris = 0;
             equipe.robos[i] = temp;
+            terreno.terreno[x][y].robo = equipe.robos[i];
+            terreno.terreno[x][y].ocupada = true;
         }
     }
     public void play(){
@@ -92,5 +112,23 @@ public class Controlador {
         }
 
 
+    }
+
+
+
+    public void jogar(){
+        while(this.tempo < this.tempo_jogo){
+            int rand = ThreadLocalRandom.current().nextInt(0, this.equipe.total_robos * 4);
+            if(rand % 4 == 0){
+                this.equipe.robos[rand / 4].Andar(this.equipe.robos[rand / 4].atual.t);
+            }else if(rand % 4 == 1){
+                this.equipe.robos[rand / 4].GirarEsquerda();
+            }else if(rand % 4 == 2){
+                this.equipe.robos[rand / 4].GirarDireita();
+            }else if(rand % 4 == 3){
+                this.equipe.robos[rand / 4].Sondar();
+            }
+            imprimir_terreno(this.equipe.robos[0].atual.t);
+        }
     }
 }
