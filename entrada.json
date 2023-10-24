@@ -1,15 +1,27 @@
 {
-  "tamanhoCampo": 10,
-  "tempoJogo": 60,
-  "nEquipes": 2,
+  "tamanhoCampo": 20,
+  "tempoJogo": 120,
+  "nEquipes": 5,
   "equipes": {
     "1": {
       "nome": "Equipe 1",
-      "robos": 3
+      "robos": 4
     },
     "2": {
       "nome": "Equipe 2",
-      "robos": 3
+      "robos": 4
+    },
+    "3": {
+      "nome": "Equipe 3",
+      "robos": 4
+    },
+    "4": {
+      "nome": "Equipe 4",
+      "robos": 4
+    },
+    "5": {
+      "nome": "Equipe 5",
+      "robos": 4
     }
   }
 }

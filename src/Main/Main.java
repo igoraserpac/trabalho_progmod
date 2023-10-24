@@ -75,8 +75,8 @@ public class Main {
                     barris_vencendor = controlador.equipe.ver_barris();
                     vencedor = nome;
                 }
-                System.out.println("\nVencedor: " + vencedor + "\nBarris: " + barris_vencendor);
             }
+            System.out.println("\nVencedor: " + vencedor + "\nBarris: " + barris_vencendor);
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
