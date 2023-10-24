@@ -10,10 +10,10 @@ public class Controlador {
     public int tempo;
     public double randomico;
     Equipe equipe;
-    Robo robo;
-    public Controlador(int n_robos, Terreno terreno){
+    public Controlador(int n_robos, Terreno terreno, String nome){
+
         Random rand = new Random();
-        this.equipe = new Equipe(n_robos);
+        this.equipe = new Equipe(nome, n_robos);
         for(int i = 0; i < n_robos; i++){
             Robo temp = new Robo();
             temp.direcao = 'L';
