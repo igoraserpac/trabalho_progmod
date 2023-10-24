@@ -5,11 +5,12 @@ import java.util.Map;
 public class Equipe {
     String nome;
     public int total_robos;
-    public double baris;
+    public double baris = 0;
     public Robo[] robos;
 
-    public Equipe(int total){
+    public Equipe(String nome, int total){
         this.total_robos = total;
+        this.nome = nome;
         this.robos = new Robo[this.total_robos];
     }
     public double ver_barris_robo(int i){

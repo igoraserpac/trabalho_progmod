@@ -6,14 +6,13 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Controlador {
-    public int tempo_jogo = 60;
-    public double tempo;
+    public static int tempo_jogo = 60;
+    public int tempo;
     public double randomico;
     Equipe equipe;
-    Robo robo;
-    public Controlador(int n_robos, Terreno terreno){
+    public Controlador(int n_robos, Terreno terreno, String nome){
         Random rand = new Random();
-        this.equipe = new Equipe(n_robos);
+        this.equipe = new Equipe(nome, n_robos);
         for(int i = 0; i < n_robos; i++){
             Robo temp = new Robo();
             temp.direcao = 'L';
@@ -32,8 +31,6 @@ public class Controlador {
     }
     public void play(){
         // TODO
-
-
         Robo rob = new Robo();
         int num_robos = this.equipe.total_robos*9;
         while(this.tempo < this.tempo_jogo){
@@ -92,7 +89,6 @@ public class Controlador {
                 System.out.print("Tempo: " + this.equipe.robos[randomico/9].Tempo());
                 this.tempo += 1;
             }
-
         }
 
 
