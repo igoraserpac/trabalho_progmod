@@ -29,7 +29,7 @@ public class Equipe {
         return this.robos[i].Tempo();
     }
     public double ver_barris(){
-        int total = 0;
+        double total = 0;
         for(int i = 0; i < this.total_robos; i++){
             total += this.robos[i].barris;
         }

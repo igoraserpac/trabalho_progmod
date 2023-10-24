@@ -14,7 +14,7 @@ public class Celula {
     public boolean ocupada = false;
     public boolean sendo_sondada = false;
     public Terreno t;
-    public Robo r;
+    public Robo robo;
 
     public void Init(int x, int y, Terreno t) {
         Random rand = new Random();
@@ -45,16 +45,6 @@ public class Celula {
     }
 
     public boolean PodeSondar(){
-//        if(this.t.terreno[this.pos.get("linha)+1][this.pos.get("coluna)].sendo_sondada == false){
-//            if(this.t.terreno[this.pos.get("linha)-1][this.pos.get("coluna)].sendo_sondada == false){
-//                if(this.t.terreno[this.pos.get("linha)][this.pos.get("coluna)+1].sendo_sondada == false){
-//                    if(this.t.terreno[this.pos.get("linha)][this.pos.get("coluna)-1].sendo_sondada == false){
-//                        return true;
-//                    }
-//                }
-//            }
-//        }
-//        return false;
         for(int i = this.pos.get("linha") + 1; i > this.pos.get("linha") - 2; i--){
             for(int j = this.pos.get("coluna") - 1; j < this.pos.get("coluna") + 2; j++){
                 if(i >= 0 && i < this.t.x && j >=0 && j < this.t.y){
