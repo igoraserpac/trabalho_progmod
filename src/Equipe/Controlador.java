@@ -9,9 +9,9 @@ public class Controlador {
     public static int tempo_jogo = 60;
     public int tempo;
     Equipe equipe;
-    public Controlador(int n_robos, Terreno terreno){
+    public Controlador(int n_robos, Terreno terreno, String nome){
         Random rand = new Random();
-        this.equipe = new Equipe(n_robos);
+        this.equipe = new Equipe(nome, n_robos);
         for(int i = 0; i < n_robos; i++){
             Robo temp = new Robo();
             temp.direcao = 'L';
