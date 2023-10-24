@@ -5,7 +5,6 @@ import java.util.Map;
 public class Equipe {
     String nome;
     public int total_robos;
-    public double baris = 0;
     public Robo[] robos;
 
     public Equipe(String nome, int total){

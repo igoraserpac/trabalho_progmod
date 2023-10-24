@@ -1,26 +1,15 @@
 {
-  "campo": 10,
+  "tamanhoCampo": 10,
+  "tempoJogo": 60,
   "nEquipes": 2,
   "equipes": {
     "1": {
-      "nome": "equipe 1",
-      "robos": 3,
-      "comandos": {
-        "1": "g_direita",
-        "2": "andar",
-        "3": "sondar",
-        "4": "ver_tempo"
-      }
+      "nome": "Equipe 1",
+      "robos": 3
     },
     "2": {
-      "nome": "equipe 2",
-      "robos": 3,
-      "comandos": {
-        "1": "g_direita",
-        "2": "andar",
-        "3": "sondar",
-        "4": "ver_tempo"
-      }
+      "nome": "Equipe 2",
+      "robos": 3
     }
   }
 }
