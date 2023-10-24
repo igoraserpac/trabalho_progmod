@@ -46,17 +46,19 @@ public class Main {
     public static void main(String[] args){
         Terreno T = new Terreno(5, 5);
         T.CriarTerreno();
-        for (int linha = 4; linha >= 0; linha--){
-            for (int coluna = 0; coluna < 5; coluna++){
-                System.out.println(T.terreno[linha][coluna].pos.get("linha") + " "+ T.terreno[linha][coluna].pos.get("coluna"));
-                System.out.println(T.terreno[linha][coluna].Concentracao() + " " + T.terreno[linha][coluna].Rugosidade());
-            }
-        }
+//        for (int linha = 4; linha >= 0; linha--){
+//            for (int coluna = 0; coluna < 5; coluna++){
+//                System.out.println(T.terreno[linha][coluna].pos.get("linha") + " "+ T.terreno[linha][coluna].pos.get("coluna"));
+//                System.out.println(T.terreno[linha][coluna].Concentracao() + " " + T.terreno[linha][coluna].Rugosidade());
+//            }
+//        }
         Controlador controlador = new Controlador(5, T, "equipe1");
+        System.out.print("Terreno Inicial\n");
         imprimir_terreno(T);
-        controlador.jogar();
+        controlador.play();
+        System.out.print("Terreno Final\n");
         imprimir_terreno(T);
-        System.out.println(controlador.equipe.baris);
+        //System.out.println(controlador.equipe.baris);
 //        Robo gpt = new Robo();
 //        gpt.atual = T.terreno[1][1];
 //        imprimir(gpt);
@@ -110,8 +112,8 @@ public class Main {
 //        }
 //        Robo gpt = new Robo();
 //        gpt.atual = T.terreno[1][1];
-        Controlador c = new Controlador(3, T, "equipe 1");
-        c.play();
+        //Controlador c = new Controlador(3, T, "equipe 1");
+        //c.play();
 //        imprimir(gpt);
 //        gpt.Sondar();
 //        imprimir(gpt);
